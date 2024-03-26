@@ -18,12 +18,6 @@ public class CardIndexController {
     private final CardIndexRepository cardIndexRepository;
     private final CardindexMapper cardindexMapper;
 
-
-//    @PutMapping
-//    public Cardindex insertCartIndex(@RequestBody Cardindex cardindex) {
-//       return cardIndexRepository.save(cardindex);
-//    }
-
     @PutMapping
     public Cardindex insertCartIndex(@RequestBody CardindexDto cardindexDto) {
         return cardIndexRepository.save(cardindexMapper.dtoToCardindex(cardindexDto));
