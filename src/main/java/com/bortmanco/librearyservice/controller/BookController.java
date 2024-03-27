@@ -3,6 +3,7 @@ package com.bortmanco.librearyservice.controller;
 
 import com.bortmanco.librearyservice.data.ent.Book;
 import com.bortmanco.librearyservice.dto.BookDto;
+import com.bortmanco.librearyservice.mapper.BookMapper;
 import com.bortmanco.librearyservice.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,16 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookController {
 
     private final BookRepository bookRepository;
+    private final BookMapper bookMapper;
 
 
     @PutMapping
     public Book insertBook(@RequestBody  BookDto bookDto) {
-        Book book = new Book();
-        book.setAuthor(bookDto.getAuthor());
-        book.setTitle(bookDto.getTitle());
-        book.setYear(bookDto.getYear());
-
-         return bookRepository.save(book);
+        return bookRepository.save(bookMapper.dtoToBook(bookDto));
     }
 
 
