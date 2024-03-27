@@ -5,11 +5,11 @@ import com.bortmanco.librearyservice.data.ent.Book;
 import com.bortmanco.librearyservice.dto.BookDto;
 import com.bortmanco.librearyservice.mapper.BookMapper;
 import com.bortmanco.librearyservice.repository.BookRepository;
+import com.bortmanco.librearyservice.sevice.CardIndexService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RequestMapping("/books")
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookController {
 
     private final BookRepository bookRepository;
+    private final CardIndexService cardIndexService;
     private final BookMapper bookMapper;
 
 
@@ -26,6 +27,9 @@ public class BookController {
         return bookRepository.save(bookMapper.dtoToBook(bookDto));
     }
 
-
+    @GetMapping
+    public List<BookDto> getAvailableBooks() {
+        return cardIndexService.getAvailableBooks();
+    }
 
 }
