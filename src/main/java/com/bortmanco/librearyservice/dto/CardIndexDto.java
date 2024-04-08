@@ -1,5 +1,6 @@
 package com.bortmanco.librearyservice.dto;
 
+import com.bortmanco.librearyservice.data.ent.Book;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CardIndexDto {
-    private Long studentId;
-    private boolean reserved;
-    private Long id;
+    private Book book;
 }

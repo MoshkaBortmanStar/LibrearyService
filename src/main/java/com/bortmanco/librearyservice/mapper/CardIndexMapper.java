@@ -6,5 +6,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface CardIndexMapper {
-    public Cardindex toCardIndex(CardIndexDto cardIndexDto);
+    public Cardindex mapToCardIndex(CardIndexDto cardIndexDto);
 }
