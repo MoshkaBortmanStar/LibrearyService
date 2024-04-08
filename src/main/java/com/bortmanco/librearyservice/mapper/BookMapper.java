@@ -1,7 +1,7 @@
 package com.bortmanco.librearyservice.mapper;
 
 import com.bortmanco.librearyservice.data.ent.Book;
-import com.bortmanco.librearyservice.dto.BookDto;
+import org.example.universitystarter.dto.BookDto;
 import org.mapstruct.Mapper;
 
 import java.util.List;

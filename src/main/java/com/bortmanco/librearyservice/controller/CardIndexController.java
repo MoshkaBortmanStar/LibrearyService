@@ -1,10 +1,10 @@
 package com.bortmanco.librearyservice.controller;
 
 import com.bortmanco.librearyservice.data.ent.Cardindex;
-import com.bortmanco.librearyservice.dto.CardindexDto;
 import com.bortmanco.librearyservice.mapper.CardindexMapper;
 import com.bortmanco.librearyservice.repository.CardIndexRepository;
 import lombok.RequiredArgsConstructor;
+import org.example.universitystarter.dto.CardindexDto;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

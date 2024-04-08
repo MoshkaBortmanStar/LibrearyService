@@ -1,6 +1,6 @@
 package com.bortmanco.librearyservice.sevice;
 
-import com.bortmanco.librearyservice.dto.BookDto;
+import org.example.universitystarter.dto.BookDto;
 
 import java.util.List;
 

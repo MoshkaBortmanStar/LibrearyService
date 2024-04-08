@@ -27,6 +27,9 @@ dependencies {
     implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
     implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.4.Final'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.1.0'
+//    поменять путь до файла и собрать библиотеку из стартера https://github.com/ShushaAlex/university-starter
+    implementation files('/Users/alex/IdeaProjects/university-starter/build/libs/university-starter-0.0.1-SNAPSHOT-plain.jar')
+
 
     implementation 'org.mapstruct:mapstruct:1.5.3.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
