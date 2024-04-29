@@ -33,6 +33,9 @@ dependencies {
     annotationProcessor group: 'org.projectlombok', name: 'lombok-mapstruct-binding', version: '0.1.0'
     annotationProcessor 'org.projectlombok:lombok'
 
+    //kafka
+    implementation 'org.springframework.kafka:spring-kafka'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
